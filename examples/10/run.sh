@@ -10,7 +10,7 @@ echo 'dołożymy nieco więcej kontenerów aplikacji'
 sleep 5
 fig scale app=4
 
-echo 'sprawdzamy czy możemy się połączyć z naszą aplikacją (czekamy 10 sek.)'
+echo 'sprawdzamy czy możemy się połączyć z naszą aplikacją (czekamy 5 sek.)'
 sleep 5
 
 curl -s http://127.0.0.1:9000/
