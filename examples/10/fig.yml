@@ -1,0 +1,16 @@
+redis:
+  image: redis
+
+app:
+  build: ./app/
+  links:
+    - redis:redis_host
+
+haproxy:
+  image: dockerfile/haproxy
+  links:
+    - app
+  volumes:
+    - haproxy:/haproxy-override
+  ports:
+    - "9000:80"

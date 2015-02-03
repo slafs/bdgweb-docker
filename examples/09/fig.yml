@@ -1,0 +1,9 @@
+redis:
+  image: redis
+
+app:
+  build: ./app/
+  links:
+    - redis:redis_host
+  ports:
+    - "9000:8080"
